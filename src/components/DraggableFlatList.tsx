@@ -11,11 +11,11 @@ import {
   NativeScrollEvent,
   NativeSyntheticEvent,
   LayoutChangeEvent,
+  FlatList,
 } from "react-native";
 import {
   PanGestureHandler,
   State as GestureState,
-  FlatList,
   PanGestureHandlerGestureEvent,
   PanGestureHandlerStateChangeEvent,
 } from "react-native-gesture-handler";
@@ -431,7 +431,7 @@ function DraggableFlatList<T>(
   return (
     <PropsProvider {...props}>
       <AnimatedValueProvider>
-        <RefProvider flatListRef={ref}>
+        <RefProvider flatListRef={ref as any}>
           <DraggableFlatListInner {...props} />
         </RefProvider>
       </AnimatedValueProvider>

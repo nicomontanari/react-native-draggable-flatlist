@@ -51,7 +51,7 @@ export function NestableDraggableFlatListInner<T>(
   return (
     <Animated.View ref={viewRef} onLayout={onListContainerLayout}>
       <DraggableFlatList
-        ref={ref}
+        ref={ref as any}
         activationDistance={20}
         autoscrollSpeed={50}
         scrollEnabled={false}

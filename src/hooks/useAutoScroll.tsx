@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import Animated, {
+import {
   abs,
   add,
   and,
